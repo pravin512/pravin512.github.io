@@ -467,7 +467,7 @@
                       </div>
                       <div class="row">
                         <div class="col">
-                          <button class="btn btn-primary" type="submit" onclick="alert('Thank-you for contacting.')">Send</button>
+                          <button class="btn btn-primary" type="submit" onclick="contact();">Send</button>
                         </div>
                       </div>
                     </form>
@@ -501,5 +501,13 @@
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
+    <script>
+      function contact()
+      {
+        alert('Thank-you for contacting.');
+        window.reload();
+        return false
+      }
+    </script>
   </body>
 </html>
