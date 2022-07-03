@@ -437,42 +437,40 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
-                    <form >
                       <div class="p pb-3"><strong>Feel free to contact me </strong></div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                            <input class="form-control" type="text" name="name" placeholder="Name" required="required"/>
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Name" required="required"/>
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
-                            <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required"/>
+                            <input class="form-control" type="text" id="Subject" name="Subject" placeholder="Subject" required="required"/>
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/>
+                            <input class="form-control" type="email" id="_replyto" name="_replyto" placeholder="E-mail" required="required"/>
                           </div>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
+                            <textarea class="form-control" id="message" name="message" placeholder="Your Message" required="required"></textarea>
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col">
-                          <button class="btn btn-primary" type="submit" onclick="contact();">Send</button>
+                          <button class="btn btn-primary" type="submit" onclick="alert('Thank-you for contacting.');">Send</button>
                         </div>
                       </div>
-                    </form>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -494,8 +492,11 @@
   </div>
 </div></div>
     </div>
-    <footer class="footer">
-      <div class="h4 title text-center">Pravin Soni</div>
+    <footer class="footer align-items-center">
+      <div class="h4 title text-center">Pravin Soni <br>
+        <div id="CounterVisitor"></div>
+      </div>
+      
     </footer>
     <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
     <script src="js/core/popper.min.js?ver=1.1.0"></script>
@@ -503,13 +504,18 @@
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
-    <script>
-      function contact()
-      {
-        alert('Thank-you for contacting.');
-        window.reload();
-        return false
+    <script type="text/javascript">
+      var n = localStorage.getItem('on_load_counter');
+
+      if (n === null) {
+          n = 0;
       }
+
+      n++;
+
+      localStorage.setItem("on_load_counter", n);
+
+      document.getElementById('CounterVisitor').innerHTML = n;
     </script>
   </body>
 </html>
