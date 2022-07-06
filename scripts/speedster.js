@@ -22,7 +22,7 @@ function ShowProgressMessage(msg) {
 }
 
 function InitiateSpeedDetection() {
-    ShowProgressMessage("Loading the image, please wait...");
+    ShowProgressMessage('<img src="images/loader.gif" style="height:150%; margin-top: -7px;">');
     window.setTimeout(MeasureConnectionSpeed, 1);
 };    
 
@@ -55,10 +55,7 @@ function MeasureConnectionSpeed() {
         var speedKbps = (speedBps / 1024).toFixed(2);
         var speedMbps = (speedKbps / 1024).toFixed(2);
         ShowProgressMessage([
-            "Your connection speed is:", 
-            speedBps + " bps", 
-            speedKbps + " kbps", 
-            speedMbps + " Mbps"
+            '<i class="fa fa-arrow-up mr-2"></i>'+speedMbps + " Mbps"+'<i class="fa fa-refresh ml-2"></i>'
         ]);
     }
 }
