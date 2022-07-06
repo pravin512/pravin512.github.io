@@ -1,5 +1,6 @@
 //JUST AN EXAMPLE, PLEASE USE YOUR OWN PICTURE!
-var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg"; 
+// var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg"; 
+var imageAddr = "https://pravin512.github.io/images/downloadable.jpg";
 var downloadSize = 4995374; //bytes
 
 function ShowProgressMessage(msg) {
