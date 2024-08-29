@@ -18,8 +18,8 @@ function success(position) {
     const userLong = position.coords.longitude;
 
     // Replace with your allowed latitude and longitude
-    const allowedLat = 12.9142; 
-    const allowedLong = 77.6234; 
+    const allowedLat = 22.002921; 
+    const allowedLong = 81.218206; 
 
     const distance = calculateDistance(userLat, userLong, allowedLat, allowedLong);
 
